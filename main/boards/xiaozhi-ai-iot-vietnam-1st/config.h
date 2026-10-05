@@ -1,4 +1,3 @@
-
 #ifndef _BOARD_CONFIG_H_
 #define _BOARD_CONFIG_H_
 
@@ -27,23 +26,11 @@
 #define VOLUME_UP_BUTTON_GPIO   GPIO_NUM_39
 #define VOLUME_DOWN_BUTTON_GPIO GPIO_NUM_40
 
-#define DISPLAY_SDA GPIO_NUM_10
-#define DISPLAY_SCL GPIO_NUM_9
-#define DISPLAY_DC GPIO_NUM_8
-#define DISPLAY_CS GPIO_NUM_14
-#define DISPLAY_RES GPIO_NUM_18
-
-#define DISPLAY_WIDTH   284
-#define DISPLAY_HEIGHT  240
-#define DISPLAY_OFFSET_X  36
-#define DISPLAY_OFFSET_Y  0
-
-#define DISPLAY_SWAP_XY  true
-#define DISPLAY_MIRROR_X false
-#define DISPLAY_MIRROR_Y true
-#define BACKLIGHT_INVERT false
-#define DISPLAY_BACKLIGHT_PIN GPIO_NUM_13
-#define DISPLAY_BACKLIGHT_OUTPUT_INVERT false
+// --- CẤU HÌNH MÀN HÌNH OLED 0.96 INCH I2C CHO MẠCH TÍM ---
+#define DISPLAY_SDA             GPIO_NUM_11 // Chân IO11/SDA trên mạch tím
+#define DISPLAY_SCL             GPIO_NUM_12 // Chân IO12/SCL trên mạch tím
+#define DISPLAY_WIDTH           128         // Chiều rộng chuẩn OLED
+#define DISPLAY_HEIGHT          64          // Chiều cao chuẩn OLED
 
 #define SECONDS_TO_SLEEP_MODE   (60U * 15U)  // 15 minutes
 #define SECONDS_TO_SHUTDOWN     (60U * 30U) // 30 minutes
