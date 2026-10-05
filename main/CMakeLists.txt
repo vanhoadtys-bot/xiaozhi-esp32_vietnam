@@ -188,3 +188,4 @@ elseif(CONFIG_BOARD_TYPE_MAGICLICK_S3_2P5)
 elseif(CONFIG_BOARD_TYPE_MAGICLICK_C3)
     set(BOARD_TYPE "magiclick-c3")
 endif()
+
