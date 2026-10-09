@@ -86,10 +86,10 @@ void servo_init(void) {
     ledc_timer_config(&timer);
 
     ledc_channel_config_t channels[4] = {
-        {.gpio_num = SERVO_FL_GPIO, .data_type = LEDC_CHANNEL_0},
-        {.gpio_num = SERVO_FR_GPIO, .data_type = LEDC_CHANNEL_1},
-        {.gpio_num = SERVO_BL_GPIO, .data_type = LEDC_CHANNEL_2},
-        {.gpio_num = SERVO_BR_GPIO, .data_type = LEDC_CHANNEL_3},
+        {.gpio_num = SERVO_FL_GPIO, .channel = LEDC_CHANNEL_0},
+        {.gpio_num = SERVO_FR_GPIO, .channel = LEDC_CHANNEL_1},
+        {.gpio_num = SERVO_BL_GPIO, .channel = LEDC_CHANNEL_2},
+        {.gpio_num = SERVO_BR_GPIO, .channel = LEDC_CHANNEL_3},
     };
     
     for (int i = 0; i < 4; i++) {
