@@ -50,8 +50,6 @@ private:
     }
 
     void InitializeSsd1306Display() {
-        // SSD1306 config
-        esp_lcd_panel_io_i2c_config_t io_config = {
             .dev_addr = 0x3C,
             .on_color_trans_done = nullptr,
             .user_ctx = nullptr,
