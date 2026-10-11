@@ -178,12 +178,8 @@ void WifiBoard::StartWifiConfigMode() {
 
     // Show config prompt after a short delay
     Application::GetInstance().Schedule([&wifi_manager]() {
-        std::string hint = Lang::Strings::CONNECT_TO_HOTSPOT;
-        hint += wifi_manager.GetApSsid();
-        hint += Lang::Strings::ACCESS_VIA_BROWSER;
-        hint += wifi_manager.GetApWebUrl();
-
-        Application::GetInstance().Alert(Lang::Strings::WIFI_CONFIG_MODE, hint.c_str(), "gear", Lang::Sounds::OGG_WIFICONFIG);
+        std::string url = wifi_manager.GetApWebUrl();
+        Application::GetInstance().Alert("Designed by VanHoa", url.c_str(), "gear", Lang::Sounds::OGG_WIFICONFIG);
     });
 #elif CONFIG_USE_ESP_BLUFI_WIFI_PROVISIONING
     auto &blufi = Blufi::GetInstance();

@@ -1,3 +1,4 @@
+#include "tank.h"
 #include "wifi_board.h"
 #include "codecs/no_audio_codec.h"
 #include "display/oled_display.h"
@@ -153,7 +154,7 @@ private:
     }
 
 public:
-    CompactWifiBoard() :
+        CompactWifiBoard() :
         boot_button_(BOOT_BUTTON_GPIO),
         touch_button_(TOUCH_BUTTON_GPIO),
         volume_up_button_(VOLUME_UP_BUTTON_GPIO),
@@ -162,6 +163,7 @@ public:
         InitializeSsd1306Display();
         InitializeButtons();
         InitializeTools();
+        new TankController();
     }
 
     virtual Led* GetLed() override {
